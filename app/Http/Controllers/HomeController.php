@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
- 
+
 use App\Http\Requests;
 
 class HomeController extends Controller
@@ -20,7 +20,7 @@ class HomeController extends Controller
     {
         $data = [
             'title'=> 'Гостевая книга',
-            'pagetitle'=>'Гостевая книга'.$id
+            'pagetitle'=>'Редактирование сообщения №'.$id
         ];
         return view('pages.massage.edit',$data);
     }
