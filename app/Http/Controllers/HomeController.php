@@ -1,9 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-
+ 
 use App\Http\Requests;
 
 class HomeController extends Controller
@@ -20,6 +18,10 @@ class HomeController extends Controller
     }
     public function edit($id)
     {
-        return view('pages.massage.edit');
+        $data = [
+            'title'=> 'Гостевая книга',
+            'pagetitle'=>'Гостевая книга'.$id
+        ];
+        return view('pages.massage.edit',$data);
     }
 }
